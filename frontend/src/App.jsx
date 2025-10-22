@@ -21,8 +21,11 @@ function App() {
   }, [])
 
   async function reviewCode() {
-    const response = await axios.post('https://code-reviewer-2-nhk3.onrender.com', { code })
-    setReview(response.data)
+    const response = await axios.post(
+      'https://code-reviewer-2-nhk3.onrender.com/ai',
+      { code },
+      { headers: { 'Content-Type': 'application/json' } }
+    );
   }
 
   return (
