@@ -20,17 +20,10 @@ function App() {
     prism.highlightAll()
   }, [])
 
-  const BACKEND_URL = 'https://code-reviewer-2-nhk3.onrender.com'; 
-
-  async function postData(data) {
-    try {
-      const response = await axios.post(`${BACKEND_URL}/api/some-endpoint`, data);
-      return response.data;
-    } catch (error) {
-      console.error('Error connecting to backend:', error);
-      throw error;
+  async function reviewCode() {
+    const response = await axios.post('https://code-reviewer-2-nhk3.onrender.com', { code })
+    setReview(response.data)
   }
-}
 
   return (
     <>
