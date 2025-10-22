@@ -5,7 +5,7 @@ const aiRoutes = require('./routes/ai.routes')
 const app = express()
 
 app.use(cors({
-  origin: 'http://localhost:5173', 
+  origin: 'https://code-reviewer-3-v40k.onrender.com', 
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 }));
