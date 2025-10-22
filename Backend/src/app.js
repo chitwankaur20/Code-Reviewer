@@ -5,7 +5,7 @@ const aiRoutes = require('./routes/ai.routes')
 const app = express()
 
 app.use(cors({
-  origin: 'http://localhost:5173', // your Vite frontend
+  origin: 'http://localhost:5173', 
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 }));
